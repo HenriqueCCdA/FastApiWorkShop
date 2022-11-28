@@ -2,6 +2,7 @@ version: '3.9'
 
 services:
   api:
+    container_name: fastapi_api_dev
     build:
       context: .
       dockerfile: Dockerfile.dev
@@ -17,6 +18,7 @@ services:
     stdin_open: true
     tty: true
   db:
+    container_name: fastapi_db_dev
     build: postgres
     image: pamps_postgres-13-alpine-multi-user
     volumes:
